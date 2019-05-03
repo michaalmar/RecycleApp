@@ -12,10 +12,13 @@ namespace RecycleApp.Controllers
     {
         private DataContex db = new DataContex();
         // GET: Category
-        public ActionResult Index()
+     
+
+        public ActionResult Create()
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Create(Category category)
         {
@@ -28,6 +31,11 @@ namespace RecycleApp.Controllers
                 }
             
       return View(category);
+        }
+
+        public ViewResult Index()
+        {
+            return View(db.Categories.ToList());
         }
     }
 
