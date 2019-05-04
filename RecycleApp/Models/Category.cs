@@ -10,6 +10,7 @@ namespace RecycleApp.Models
     {
         [Key]
         public int CategoryID { get; set; }
+        [Display (Name="Nazwa Kategorii")]
         public string Name { get; set; }
 
         public virtual ICollection<Trash> Trashes { get; set; }

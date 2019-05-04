@@ -3,6 +3,7 @@ using RecycleApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -11,8 +12,13 @@ namespace RecycleApp.Controllers
     public class CategoryController : Controller
     {
         private DataContex db = new DataContex();
+
         // GET: Category
-     
+        public ViewResult Index()
+        {
+            return View(db.Categories.ToList());
+        }
+
 
         public ActionResult Create()
         {
@@ -30,13 +36,21 @@ namespace RecycleApp.Controllers
                     return RedirectToAction("Index");    
                 }
             
-      return View(category);
+        return View(category);
+        }
+       
+      
+        public ActionResult Delete(int? id)
+        {
+            Category category = db.Categories.Find(id);
+            db.Categories.Remove(category);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+
         }
 
-        public ViewResult Index()
-        {
-            return View(db.Categories.ToList());
-        }
+
     }
 
 
