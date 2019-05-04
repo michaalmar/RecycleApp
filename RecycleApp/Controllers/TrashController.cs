@@ -13,9 +13,7 @@ namespace RecycleApp.Controllers
         private DataContex db = new DataContex();
         // GET: Trash
         public ViewResult Index(string searchString)
-        {
-            var catrgory = from c in db.Categories
-                        select c;
+        { 
 
             var trash = from t in db.Trashes
                         select t;
@@ -53,7 +51,8 @@ namespace RecycleApp.Controllers
             db.Trashes.Remove(trash);
             db.SaveChanges();
 
-            return RedirectToAction("Index");        }
+            return RedirectToAction("Index");
+        }
 
 
     }
