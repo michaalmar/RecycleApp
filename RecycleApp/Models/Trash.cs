@@ -10,9 +10,13 @@ namespace RecycleApp.Models
     {
         [Key]   
         public int TrashID { get; set; }
-       
+
+      
+        [Required]
+        [Display(Name = "Kategoria")]
         public int CategoryID { get; set; }
 
+        [Required]
         [Display (Name="Nazwa odpadu")]
         public string  Name { get; set; }  
         

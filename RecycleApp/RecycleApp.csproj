@@ -116,8 +116,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\TrashController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DAL\DataContex.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -130,10 +132,28 @@
     <Compile Include="Migrations\201905031922277_first.Designer.cs">
       <DependentUpon>201905031922277_first.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905041556273_2.cs" />
+    <Compile Include="Migrations\201905041556273_2.Designer.cs">
+      <DependentUpon>201905041556273_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905041600416_3.cs" />
+    <Compile Include="Migrations\201905041600416_3.Designer.cs">
+      <DependentUpon>201905041600416_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905042227066_4.cs" />
+    <Compile Include="Migrations\201905042227066_4.Designer.cs">
+      <DependentUpon>201905042227066_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905042243497_5.cs" />
+    <Compile Include="Migrations\201905042243497_5.Designer.cs">
+      <DependentUpon>201905042243497_5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Trash.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\LoggedUserVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -148,6 +168,10 @@
     <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Trash\Index.cshtml" />
     <Content Include="Views\Trash\Create.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Authentication\Login.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -164,6 +188,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905031922277_first.resx">
       <DependentUpon>201905031922277_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905041556273_2.resx">
+      <DependentUpon>201905041556273_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905041600416_3.resx">
+      <DependentUpon>201905041600416_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905042227066_4.resx">
+      <DependentUpon>201905042227066_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905042243497_5.resx">
+      <DependentUpon>201905042243497_5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

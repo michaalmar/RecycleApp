@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace RecycleApp.Controllers
 {
+    [Authorize]
     public class CategoryController : Controller
     {
         private DataContex db = new DataContex();

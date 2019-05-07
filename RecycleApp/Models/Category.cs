@@ -9,7 +9,10 @@ namespace RecycleApp.Models
     public class Category
     {
         [Key]
+        [Display (Name="Kategoria")]
         public int CategoryID { get; set; }
+
+        [Required]
         [Display (Name="Nazwa Kategorii")]
         public string Name { get; set; }
 
