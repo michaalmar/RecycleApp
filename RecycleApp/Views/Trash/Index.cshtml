@@ -14,7 +14,7 @@
 {
     <p>
         Znajdź po kategorii: @Html.TextBox("SearchString")
-        <input type="submit" value="Search" />
+        <input type="submit" value="Szukaj"  />
     </p>
 }
 
@@ -39,9 +39,9 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.TrashID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.TrashID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.TrashID })
+                @Html.ActionLink("Edytuj", "Edit", new { id = item.TrashID }) |
+                @Html.ActionLink("Szczegóły", "Details", new { id = item.TrashID }) |
+                @Html.ActionLink("Usuń", "Delete", new { id = item.TrashID })
             </td>
         </tr>
     }

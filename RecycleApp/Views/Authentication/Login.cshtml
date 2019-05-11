@@ -5,38 +5,37 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Login</h2>
+
 
 @using (Html.BeginForm())
 {
 
 
-    <h4>Logowanie do systemu</h4>
+    <h2>Zaloguj się do systemu</h2>
     <hr />
     <p style="color:red">
         @Html.ValidationMessage("CredentialError")
     </p>
+ 
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(model => model.userName, "Nazwa użytkownika", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.userName, new { htmlAttributes = new { @class = "form-control" } })
 
-    <table>
-        <tr>
-            <td style="text-align:right">
-                @Html.DisplayNameFor(model => model.userName):
-            </td>
-            <td>
-                @Html.EditorFor(model => model.userName)
-            </td>
-        </tr>
-        <tr>
-            <td style="text-align:right">
-                @Html.DisplayNameFor(model => model.password):
-            </td>
-            <td>
-                @Html.PasswordFor(model => model.password)
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.password, "Hasło", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
+               
+            </div>
+        </div>
+    </div>
+ 
     <br />
-    <input type="submit" value="Zatwierdź" />
+    <input type="submit" value="Zatwierdź" class="btn btn-default" />
 
 
 }
